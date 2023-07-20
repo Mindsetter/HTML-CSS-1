@@ -1,0 +1,61 @@
+#box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 5em;
+  text-align: center;
+  animation-name: glow;
+  animation-duration: 2s;
+
+  animation-iteration-count: 1;
+  animation-direction:reverse;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+}
+
+/* With the animation we can use to, from or % */
+
+/* Slide from the right */
+@keyframes slideRight {
+  from {transform: translateX(500px);}
+}
+
+/* Slide Down */
+@keyframes slideDown {
+  to {transform: translateY(500px);}
+}
+
+/* Rotate */
+@keyframes rotate {
+  100% {transform: rotateZ(360deg);}
+}
+
+/* Scale up */
+@keyframes grow {
+  50% {transform: scale(2,2);}  
+}
+
+/* Shrink */
+@keyframes shrink {
+  50% {transform: scale(0.5,0.5);}
+}
+
+/* fade effect */
+@keyframes fade {
+  50% {opacity: 0;}
+}
+
+/* Color change effect */
+@keyframes colorChange {
+  0% {background-color: red;}
+  20% {background-color: rgb(21, 255, 0);}
+  40% {background-color: rgb(51, 0, 255);}
+  60% {background-color: rgb(255, 0, 191);}
+  80% {background-color: rgb(255, 221, 0);}
+  100% {background-color: rgb(0, 204, 255);} 
+}
+
+/* Glow effect */
+@keyframes glow {
+  100% {box-shadow: 0px 0px 50px black;}
+} 
